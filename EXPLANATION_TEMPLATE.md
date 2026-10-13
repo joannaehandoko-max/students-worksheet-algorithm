@@ -8,41 +8,124 @@
 
 For each exercise you completed, copy and fill in this mini-report:
 
-## Exercise XX — Title
-- **Story in my words:** TODO
-- **Input(s) and their types:** TODO
-- **Processing / logical rule:** TODO
-- **Expected output (before coding):** TODO
-- **Actual output:** TODO
-- **Normal test:** TODO
-- **Boundary or invalid test:** TODO
-- **One assumption or limitation:** TODO
-- **What I changed in `main.go`:** TODO
-- **Why I believe the result is correct:** TODO
+# EXPLANATION — My Algorithm Worksheet
 
-## Task 2 — GitHub CLI and Go basic types
-- **Fork URL and branch:** TODO
-- **Git evidence (`git remote -v`, `git log --oneline main..task-2`, at least 3 commits):** TODO
-- **Program output (`go run main.go`):** TODO
-- **Normal test (inputs and result):** TODO
-- **Boundary test (inputs and result):** TODO
-- **Invalid case I considered (e.g. dividing by zero) and what happens:** TODO
-- **Q1. Why is `7 / 2` equal to `3` but `float64(7) / float64(2)` equal to `3.5`?** TODO
-- **Q2. Why is a student ID better stored as a `string` than an `int`?** TODO
-- **Q3. What does a `const` protect you from? Give one example from this exercise.** TODO
-- **Q4. In `x > 0 && y % x == 0`, why is the order of the two conditions important?** TODO
-- **Q5. What would `fmt.Println('A')` print, and why is it not `A`?** TODO
+## Exercise 01 — Data Types
 
-## Task 2 — Fill in the blank
-- **Part A (questions 1-8):** TODO
-- **Part B (questions 9-20):** TODO
-- **Part C (questions 21-23):** TODO
+- **Story in my words:** The program stores a student's age, mass, registration status, and student ID.
+- **Inputs and types:** Age uses int, mass uses float64, checked-in status uses bool, and student ID uses string.
+- **Processing:** Assign the values to variables and print them.
+- **Expected output:** 19 | 62.5 | true | 00123
+- **Normal test:** All values are displayed correctly.
+- **Boundary test:** Storing an ID such as 00123 as an integer would remove the leading zeros.
+- **Why the result is correct:** Each variable uses a suitable data type.
 
-### My mini-defense (2 minutes)
-1. Why did I choose these types?
-2. Why did I put the operations in this order?
-3. Which test caught a mistake in my first attempt?
-4. Optional: Why is a genetic algorithm not a guaranteed optimizer?
+## Exercise 02 — Campus Café
+
+- **Story in my words:** The program calculates the cost of two coffees after a discount.
+- **Inputs:** Unit price = 18000, quantity = 2, discount = 5000.
+- **Processing:** Multiply the unit price by the quantity, then subtract the discount.
+- **Expected output:** Subtotal = 36000, Total = 31000.
+- **Normal test:** The output matches the expected calculation.
+- **Boundary test:** If the discount is greater than the subtotal, the program could produce a negative total.
+- **Why the result is correct:** The subtotal must be calculated before the discount is applied.
+
+## Exercise 03 — Factor Checker
+
+- **Story in my words:** The program checks whether one positive integer divides another evenly.
+- **Inputs:** Two integers, x and y.
+- **Processing:** Validate the inputs, then check whether y % x == 0.
+- **Expected output:** Input 5 20 produces true.
+- **Boundary test:** Input 0 20 produces invalid input.
+- **Why the result is correct:** A remainder of zero means the division has no remainder. Validation prevents division by zero.
+
+## Exercise 04 — Population
+
+- **Story in my words:** The program estimates a population after births, arrivals, deaths, and departures.
+- **Inputs:** Initial population = 1000, births = 20, arrivals = 5, deaths = 10, departures = 4.
+- **Processing:** Add births and arrivals, then subtract deaths and departures.
+- **Expected output:** Population: 1011
+- **Boundary test:** A negative population indicates invalid data or an unrealistic model.
+- **Why the result is correct:** The calculation follows the population formula.
+
+## Exercise 05 — Number Sequence
+
+- **Story in my words:** Each new number is the sum of the previous two numbers.
+- **Inputs:** Two starting numbers, 5 and 3.
+- **Processing:** Calculate the third, fourth, and fifth numbers in sequence.
+- **Expected output:** 8 11 19
+- **Boundary test:** Different starting numbers produce different sequences.
+- **Why the result is correct:** Each calculation uses the two most recent numbers.
+
+## Exercise 06 — Gravity
+
+- **Story in my words:** The program calculates weight on Earth and Mars using mass and gravity.
+- **Input:** Mass = 70 kg.
+- **Processing:** Earth weight = mass × 9.8. Mars weight = Earth weight × 0.38.
+- **Expected output:** Earth = 686.0 N; Mars = 260.7 N.
+- **Why the result is correct:** Weight depends on gravitational acceleration, while mass stays the same.
+
+## Exercise 07 — Genetic Algorithm Demonstration
+
+- **Story in my words:** The program demonstrates fitness, crossover, and mutation using four-bit strings.
+- **Processing:** Count the number of 1 bits, combine parts of two parents, and mutate one bit.
+- **Expected output:** Child 1010 has fitness 2. Mutated child 1110 has fitness 3.
+- **Why the result is correct:** Fitness is calculated by counting the number of ones.
+- **Limitation:** This demonstrates genetic algorithm operations but is not a complete genetic search.
+
+## Exercise 08 — Cube-root Check
+
+- **Story in my words:** The program checks whether x cubed equals y.
+- **Inputs:** Two integers, x and y.
+- **Processing:** Compare x*x*x with y.
+- **Expected output:** Input -3 -27 produces true; input 12 12 produces false.
+- **Boundary test:** Very large integers may overflow.
+- **Why the result is correct:** The program checks the cube using integer multiplication.
+
+## Exercise 09 — Genetic Search
+
+- **Story in my words:** The program searches for a four-bit candidate with the target value 1111.
+- **Processing:** Evaluate fitness, select parents, perform crossover, and sometimes mutate candidates.
+- **Testing:** Check that the program prints the generation number and best fitness.
+- **Limitation:** Random changes do not always improve fitness, and the search may not find the target before reaching its generation limit.
+
+## Task 2 — Fill in the Blank
+
+### Git and GitHub
+
+1. fork
+2. clone
+3. switch
+4. status, diff
+5. add
+6. push
+7. main
+8. origin
+
+### Go Types, Constants, and Operators
+
+9. 3, int
+10. 1, remainder
+11. 3.5, automatically
+12. rune, byte
+13. string, zeros
+14. const, compile-time
+15. false, true, false
+16. not
+17. assigns, compares
+18. 14, 20
+19. false, approximately
+20. A, Itoa
+
+### Complete the Program
+
+21. const, float64, >
+22. 66000 true
+23. The multiplication line needs float64(qty) because Go does not automatically convert an integer to a floating-point value.
+
+## Reflection
+
+I learned that choosing the correct data types and following the correct order of operations are important in programming. Testing normal and invalid inputs helps identify errors. I also learned that algorithms need clear rules and stopping conditions to work correctly.
 
 **Terminal evidence:** put at least three screenshots under `evidence/` in your fork, or provide terminal output text. Avoid private information in screenshots.
 
