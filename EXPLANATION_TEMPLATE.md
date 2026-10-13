@@ -2,9 +2,9 @@
 
 > Copy this file to `EXPLANATION.md` in **your own fork**. Write in English. Do not put private student details in a public repository.
 
-**GitHub username:** TODO  
-**Exercises completed:** TODO  
-**Most surprising bug:** TODO
+**GitHub username:** joannaehandoko-max  
+**Exercises completed:** Exercises 01–09 and Task 2
+**Most surprising bug:** I learned that Go does not automatically convert an int to a float64. Even though both types represent numbers, I had to convert the integer explicitly using float64(qty) before multiplying it by a floating-point value.
 
 For each exercise you completed, copy and fill in this mini-report:
 
