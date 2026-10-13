@@ -123,9 +123,37 @@ For each exercise you completed, copy and fill in this mini-report:
 22. 66000 true
 23. The multiplication line needs float64(qty) because Go does not automatically convert an integer to a floating-point value.
 
-## Reflection
+## Mini Defense
 
-I learned that choosing the correct data types and following the correct order of operations are important in programming. Testing normal and invalid inputs helps identify errors. I also learned that algorithms need clear rules and stopping conditions to work correctly.
+### 1. What did you learn from this worksheet?
+I learned how to use different data types, mathematical operators, and conditional statements in Go. I also learned how algorithms work and why testing is important.
+
+### 2. Which exercise was the most difficult?
+The genetic algorithm exercises were the most difficult for me because they involved fitness, crossover, mutation, and searching for the best solution.
+
+### 3. What was the most surprising bug you found?
+The most surprising issue was that Go does not automatically convert an int to a float64. I had to use float64(qty) to make the multiplication work correctly.
+
+### 4. How did you test your programs?
+I ran the programs and compared their outputs with the expected results. I also checked different inputs, including invalid inputs, to see how the programs behaved.
+
+### 5. What is the difference between int and float64?
+An int stores whole numbers, while a float64 stores numbers with decimal values.
+
+### 6. What does the modulo operator % do?
+The modulo operator returns the remainder of a division. For example, 20 % 5 returns 0, which means 20 is divisible by 5.
+
+### 7. What is a genetic algorithm?
+A genetic algorithm is a search method inspired by natural evolution. It uses selection, crossover, and mutation to improve possible solutions.
+
+### 8. What did you do when you found an error?
+I checked the code, identified the problem, corrected it, and ran the program again to see whether the output was correct.
+
+### 9. Why is testing important?
+Testing helps us find errors, check whether the program behaves as expected, and identify problems with unusual inputs.
+
+### 10. What would you improve in the future?
+I would improve my code by adding better input validation, testing more cases, and making the programs easier to understand and maintain.
 
 **Terminal evidence:** put at least three screenshots under `evidence/` in your fork, or provide terminal output text. Avoid private information in screenshots.
 
