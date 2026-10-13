@@ -117,11 +117,6 @@ For each exercise you completed, copy and fill in this mini-report:
 19. false, approximately
 20. A, Itoa
 
-### Complete the Program
-
-21. const, float64, >
-22. 66000 true
-23. The multiplication line needs float64(qty) because Go does not automatically convert an integer to a floating-point value.
 
 ## Mini Defense
 
